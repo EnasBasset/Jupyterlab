@@ -10,6 +10,12 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "4"
 
+volumes:
+  claimName: omranem-home-claim
+
+volumeMounts:
+  mountPath: "/home/omranem"
+
 imagePullSecrets: []
 nameOverride: "jupyterlab"
 fullnameOverride: "jupyterlab"

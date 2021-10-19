@@ -39,14 +39,14 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
             - name: http
-              containerPort: 80
+              containerPort: 8890
               protocol: TCP
           volumeMounts:
             - name: user-home
               mountPath: "{{ .Values.volumeMounts.mountPath }}"
           tty: true
           stdin: true
-          command: [ "/bin/sh", "/tmp/run.sh", "/home/omranem", "8890"]
+          command: [ "/bin/sh", "/tmp/run.sh", "{{ .Values.volumeMounts.mountPath }}", "8890"]
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

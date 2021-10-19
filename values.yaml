@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: samkos/jupyterlab_centos_7:4
+  repository: samkos/jupyterlab_centos_7
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  # tag: ""
+  tag: "4"
 
 imagePullSecrets: []
 nameOverride: "jupyterlab"

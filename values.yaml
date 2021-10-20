@@ -17,8 +17,8 @@ volumeMounts:
   mountPath: "/home/omranem"
 
 imagePullSecrets: []
-nameOverride: "jupyterlab"
-fullnameOverride: "jupyterlab"
+#nameOverride: "jupyterlab"
+#fullnameOverride: "jupyterlab"
 
 serviceAccount:
   # Specifies whether a service account should be created
